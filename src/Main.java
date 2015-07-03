@@ -12,7 +12,8 @@ public class Main {
 		int descision = 0;
 		int entryused = 0;
 		int drawingused = 0;
-		showmenu(entryused, drawingused);
+		//showmenu(entryused, drawingused);
+		Generator.startgenerator();
 	}
 	static void showmenu(int entryused, int drawingused) throws IOException{
 		BufferedReader br = new BufferedReader (new InputStreamReader(System.in));
