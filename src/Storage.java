@@ -34,6 +34,12 @@ public class Storage {
 		draw.add(c);
 		draw.add(d);
 		draw.add(e);
-		draw.add(f);		
+		draw.add(f);
+		System.out.println(a);
+		System.out.println(b);
+		System.out.println(c);
+		System.out.println(d);
+		System.out.println(e);
+		System.out.println(f);
 	}
 }
