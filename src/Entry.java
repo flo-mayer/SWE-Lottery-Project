@@ -8,7 +8,7 @@ public class Entry {
 	//InputStreamReader isr = new InputStreamReader(System.in);
 	//BufferedReader entry = new BufferedReader(isr);
 
-	static void startentry(int drawingued)throws IOException{
+	static void startentry()throws IOException{
 		InputStreamReader isr = new InputStreamReader(System.in);
 		BufferedReader br = new BufferedReader(isr);
 		System.out.println("Please enter your name and number.");
@@ -35,14 +35,8 @@ public class Entry {
 		int number4 = Integer.parseInt(part5);
 		int number5 = Integer.parseInt(part6);
 		int number6 = Integer.parseInt(part7);
-		
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 		Main.setentryused(1);
-=======
->>>>>>> origin/ruben
->>>>>>> origin/master
+		
 		if((number1>=1 && number1<=49)&&
 				(number2>=1 && number2<=49)&&	
 				(number3>=1 && number3<=49)&&
@@ -54,10 +48,9 @@ public class Entry {
 				Main.showmenu();
 			}
 		
-		Storage.store(part1, number1, number2, number3, number4, number5, number6);
-		
+		Storage.store(part1, number1, number2, number3, number4, number5, number6);		
 		Main.setentryused(1);
-	
+		Main.showmenu();
 		}
 	}
 }

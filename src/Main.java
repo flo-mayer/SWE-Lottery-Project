@@ -30,6 +30,7 @@ public class Main {
 				System.out.println("No more entries allowed after the numbers have been drawn!");
 				showmenu();
 			}
+			else Entry.startentry();
 			
 		}
 		else if (descission==2){
