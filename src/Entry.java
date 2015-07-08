@@ -36,7 +36,10 @@ public class Entry {
 		int number5 = Integer.parseInt(part6);
 		int number6 = Integer.parseInt(part7);
 		
+<<<<<<< HEAD
 		Main.setentryused(1);
+=======
+>>>>>>> origin/ruben
 		if((number1>=1 && number1<=49)&&
 				(number2>=1 && number2<=49)&&	
 				(number3>=1 && number3<=49)&&
