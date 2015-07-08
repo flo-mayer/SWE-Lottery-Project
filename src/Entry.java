@@ -15,6 +15,11 @@ public class Entry {
 		System.out.println("Like this:");
 		System.out.println("MaxMustermann 1 23 21 33 11 22");
 		String entry = br.readLine();
+			if(entry.contains("  ")){
+				System.out.println("Incorrect entry!");
+				Main.showmenu();
+			}
+		else{
 		String[] parts = entry.split(" ");
 		String part1 = parts[0]; 
 		String part2 = parts[1];
@@ -24,7 +29,29 @@ public class Entry {
 		String part6 = parts[5];
 		String part7 = parts[6];
 		
+		int number1 = Integer.parseInt(part2);
+		int number2 = Integer.parseInt(part3);
+		int number3 = Integer.parseInt(part4);
+		int number4 = Integer.parseInt(part5);
+		int number5 = Integer.parseInt(part6);
+		int number6 = Integer.parseInt(part7);
 		
 		Main.setentryused(1);
+		if((number1>=1 && number1<=49)&&
+				(number2>=1 && number2<=49)&&	
+				(number3>=1 && number3<=49)&&
+				(number4>=1 && number4<=49)&&
+				(number5>=1 && number5<=49)&&
+				(number6>=1 && number6<=49));
+			else{
+				System.out.println("Incorrect entry!");
+				Main.showmenu();
+			}
+		
+		Storage.store(part1, number1, number2, number3, number4, number5, number6);
+		
+		Main.setentryused(1);
+	
+		}
 	}
 }
