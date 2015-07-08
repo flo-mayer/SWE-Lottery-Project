@@ -25,6 +25,6 @@ public class Entry {
 		String part7 = parts[6];
 		
 		
-		//Main.setentryused(1);
+		Main.setentryused(1);
 	}
 }

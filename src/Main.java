@@ -33,7 +33,7 @@ public class Main {
 			
 		}
 		else if (descission==2){
-			if (entryused!=0){
+			if (entryused!=1){
 				System.out.println("You have to make an entry first!");
 				showmenu();
 			}
@@ -44,14 +44,25 @@ public class Main {
 			else Generator.startgenerator();
 		}
 		else if (descission==3){
-			
-			Result.startresult();
+			if (entryused!=1){
+				System.out.println("You have to make an entry first!");
+				showmenu();
+			}
+			else if(drawingused!=1){
+				System.out.println("You have to draw numbers first!");
+				showmenu();
+			}
+			else Result.startresult();
 		}
 		else if (descission==0){
 			System.exit(0);
 		}
-		else {
+		else if (descission==5){
 			
+		}
+		else {
+			System.out.println("Invalid input!");
+			showmenu();
 		}
 	    /*String entry = br.readLine();
 	    int a = sc.nextInt();

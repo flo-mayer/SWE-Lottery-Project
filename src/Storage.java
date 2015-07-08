@@ -8,7 +8,7 @@ public class Storage {
 	int[] numbers = new int[6];
 	static int counter;
 	static Storage[] entries = new Storage[999];
-	static Set<Integer> draw = new LinkedHashSet<Integer>();
+	static int[] draw = new int[6];
 	
 	public Storage(String entry, int a, int b, int c, int d, int e, int f){
 		this.name = entry;
@@ -25,16 +25,18 @@ public class Storage {
 	}
 	
 	public static void print(int counter){
+		System.out.println(counter);
 		System.out.println(entries[counter].name);
 	}
 	
 	public static void storedraw(int a, int b, int c, int d, int e, int f){
-		draw.add(a);
-		draw.add(b);
-		draw.add(c);
-		draw.add(d);
-		draw.add(e);
-		draw.add(f);
+		draw[0]=a;
+		draw[1]=b;
+		draw[2]=c;
+		draw[3]=d;
+		draw[4]=e;
+		draw[5]=f;
+		
 		System.out.println(a);
 		System.out.println(b);
 		System.out.println(c);
