@@ -37,7 +37,10 @@ public class Entry {
 		int number6 = Integer.parseInt(part7);
 		
 <<<<<<< HEAD
+<<<<<<< HEAD
 		Main.setentryused(1);
+=======
+>>>>>>> origin/ruben
 =======
 >>>>>>> origin/ruben
 		if((number1>=1 && number1<=49)&&
