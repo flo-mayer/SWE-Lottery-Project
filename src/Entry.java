@@ -31,15 +31,7 @@ public class Entry {
 		String part6 = parts[5];
 		String part7 = parts[6];
 		
-<<<<<<< HEAD
-		int number1 = Integer.parseInt(part2);
-		int number2 = Integer.parseInt(part3);
-		int number3 = Integer.parseInt(part4);
-		int number4 = Integer.parseInt(part5);
-		int number5 = Integer.parseInt(part6);
-		int number6 = Integer.parseInt(part7);
 
-=======
 		int number1 = 0;
 		int number2 = 0;
 		int number3 = 0;
@@ -61,9 +53,6 @@ public class Entry {
 			throw e;
 		}
 		
-		
-		
->>>>>>> origin/ruben
 		if((number1>=1 && number1<=49)&&
 				(number2>=1 && number2<=49)&&	
 				(number3>=1 && number3<=49)&&
