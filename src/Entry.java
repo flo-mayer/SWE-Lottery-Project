@@ -1,7 +1,9 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
 
 public class Entry {
 	String entry;
@@ -36,13 +38,25 @@ public class Entry {
 		int number5 = Integer.parseInt(part6);
 		int number6 = Integer.parseInt(part7);
 		
-		if((number1>=1 && number1<=49)&&
+		if(((number1>=1 && number1<=49)&&
 				(number2>=1 && number2<=49)&&	
 				(number3>=1 && number3<=49)&&
 				(number4>=1 && number4<=49)&&
 				(number5>=1 && number5<=49)&&
-				(number6>=1 && number6<=49));
+				(number6>=1 && number6<=49)));
 			else{
+				System.out.println("Incorrect entry!");
+				Main.showmenu();
+			}
+		Set<Integer> comparison = new HashSet<Integer>();
+		comparison.add(number1);
+		comparison.add(number2);
+		comparison.add(number3);
+		comparison.add(number4);
+		comparison.add(number5);
+		comparison.add(number6);
+		int hits = 6 - comparison.size();
+			if(hits!=6){
 				System.out.println("Incorrect entry!");
 				Main.showmenu();
 			}
