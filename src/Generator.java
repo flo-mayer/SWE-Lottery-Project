@@ -13,7 +13,6 @@ public class Generator {
 		Collections.shuffle(drawing);
 		Storage.storedraw(drawing.get(0), drawing.get(1), drawing.get(2), drawing.get(3), drawing.get(4), drawing.get(5));
 		Main.setdrawingused(1);
-		System.out.println("The numbers have been drawn!");
 		Main.showmenu();
 	}
 }
