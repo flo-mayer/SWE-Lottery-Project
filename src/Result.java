@@ -1,5 +1,8 @@
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.HashSet;
+import java.util.Scanner;
 import java.util.Set;
 
 
@@ -31,7 +34,7 @@ public class Result {
 			System.out.printf(hits + " out of 6 correct numbers!\n");
 		}
 					
-		Main.showmenu();
+		askclear();
 	}
 	
 	static int compare(int a1, int a2, int a3, int a4, int a5, int a6, int b1, int b2, int b3, int b4, int b5, int b6){
@@ -51,4 +54,24 @@ public class Result {
 		int hits = 12 - comparison.size();
 		return hits;
 	}
+	
+	static void askclear() throws IOException{
+		BufferedReader br = new BufferedReader (new InputStreamReader(System.in));
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Choose:");
+		System.out.println("1 - Reset and return to menu");
+		System.out.println("0 - Quit");
+		int descission = sc.nextInt();
+		if (descission==1){
+			Storage.clear();
+		}
+		else if (descission==0){
+			System.exit(0);
+		}
+		else {
+			System.out.println("Invalid input!");
+			askclear();
+		}
+	}
+	
 }

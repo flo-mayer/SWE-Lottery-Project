@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
@@ -9,6 +10,8 @@ public class Storage {
 	static int counter;
 	static Storage[] entries = new Storage[999];
 	static int[] draw = new int[6];
+	static int entryused = 0;
+	static int drawingused = 0;
 	
 	public Storage(String entry, int a, int b, int c, int d, int e, int f){
 		this.name = entry;
@@ -38,5 +41,22 @@ public class Storage {
 		draw[5]=f;
 		
 		System.out.println("The drawn numbers are: " + a + ", " + b + ", " + c + ", " + d + ", " + e + " and " + f);
+	}
+	
+	static int setdrawingused(int x){
+		drawingused = x;
+		return drawingused;
+	}
+	
+	static int setentryused(int x){
+		entryused = x;
+		return entryused;
+	}
+	
+	public static void clear() throws IOException{
+		counter=0;
+		entryused=0;
+		drawingused=0;
+		Main.showmenu();
 	}
 }

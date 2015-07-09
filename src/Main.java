@@ -7,8 +7,7 @@ import java.util.Scanner;
 
 public class Main {
 
-	static int entryused = 0;
-	static int drawingused = 0;
+
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		
@@ -24,9 +23,18 @@ public class Main {
 		System.out.println("2 - Draw Numbers");
 		System.out.println("3 - Show results");
 		System.out.println("0 - Quit");
-		int descission = sc.nextInt();
+		String input = sc.next();
+		int descission = -1;
+		try {
+			descission = Integer.parseInt(input);
+		}
+		catch(java.lang.NumberFormatException e){
+			System.out.println("Invalid input!");
+			showmenu();
+			throw e;
+		}
 		if (descission==1){
-			if (drawingused==1){
+			if (Storage.drawingused==1){
 				System.out.println("No more entries allowed after the numbers have been drawn!");
 				showmenu();
 			}
@@ -34,22 +42,22 @@ public class Main {
 			
 		}
 		else if (descission==2){
-			if (entryused!=1){
+			if (Storage.entryused!=1){
 				System.out.println("You have to make an entry first!");
 				showmenu();
 			}
-			else if (drawingused==1){
+			else if (Storage.drawingused==1){
 				System.out.println("Numbers are already drawn!");
 				showmenu();
 			}
 			else Generator.startgenerator();
 		}
 		else if (descission==3){
-			if (entryused!=1){
+			if (Storage.entryused!=1){
 				System.out.println("You have to make an entry first!");
 				showmenu();
 			}
-			else if(drawingused!=1){
+			else if(Storage.drawingused!=1){
 				System.out.println("You have to draw numbers first!");
 				showmenu();
 			}
@@ -57,9 +65,6 @@ public class Main {
 		}
 		else if (descission==0){
 			System.exit(0);
-		}
-		else if (descission==5){
-			
 		}
 		else {
 			System.out.println("Invalid input!");
@@ -75,13 +80,5 @@ public class Main {
 	    Storage.store(entry, a, b, c, d, e, f);
 	    Storage.print(Storage.counter-1);*/
 	}
-	static int setdrawingused(int x){
-		drawingused = x;
-		return drawingused;
-	}
 	
-	static int setentryused(int x){
-		entryused = x;
-		return entryused;
-	}
 }
