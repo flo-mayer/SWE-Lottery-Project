@@ -35,19 +35,7 @@ public class Entry {
 		int number4 = Integer.parseInt(part5);
 		int number5 = Integer.parseInt(part6);
 		int number6 = Integer.parseInt(part7);
-<<<<<<< HEAD
-		
-<<<<<<< HEAD
-<<<<<<< HEAD
-		Main.setentryused(1);
-=======
->>>>>>> origin/ruben
-=======
->>>>>>> origin/ruben
-=======
-		Main.setentryused(1);
-		
->>>>>>> origin/flo
+
 		if((number1>=1 && number1<=49)&&
 				(number2>=1 && number2<=49)&&	
 				(number3>=1 && number3<=49)&&

@@ -27,7 +27,8 @@ public class Result {
 			int b6 = Storage.draw[5];
 			int hits=compare(a1,a2,a3,a4,a5,a6,b1,b2,b3,b4,b5,b6);
 			System.out.printf("Name: "+ Storage.entries[i].name + "\n");
-			System.out.printf("Correct numbers: "+ hits + "\n");
+			System.out.printf("Numbers: "+ a1 + " " + a2 + " " + a3 + " " + a4 + " " + a5 + " " + a6 + "\n");
+			System.out.printf(hits + " out of 6 correct numbers!\n");
 		}
 					
 		Main.showmenu();

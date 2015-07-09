@@ -37,11 +37,6 @@ public class Storage {
 		draw[4]=e;
 		draw[5]=f;
 		
-		System.out.println(a);
-		System.out.println(b);
-		System.out.println(c);
-		System.out.println(d);
-		System.out.println(e);
-		System.out.println(f);
+		System.out.println("The drawn numbers are: " + a + ", " + b + ", " + c + ", " + d + ", " + e + " and " + f);
 	}
 }
