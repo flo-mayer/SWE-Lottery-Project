@@ -31,27 +31,35 @@ public class Entry {
 		String part6 = parts[5];
 		String part7 = parts[6];
 		
-		int number1 = Integer.parseInt(part2);
-		int number2 = Integer.parseInt(part3);
-		int number3 = Integer.parseInt(part4);
-		int number4 = Integer.parseInt(part5);
-		int number5 = Integer.parseInt(part6);
-		int number6 = Integer.parseInt(part7);
-<<<<<<< HEAD
-
-=======
+		int number1 = 0;
+		int number2 = 0;
+		int number3 = 0;
+		int number4 = 0;
+		int number5 = 0;
+		int number6 = 0;
 		
-<<<<<<< HEAD
-		if(((number1>=1 && number1<=49)&&
-=======
->>>>>>> origin/ruben
+		try{
+		number1 = Integer.parseInt(part2);
+		number2 = Integer.parseInt(part3);
+		number3 = Integer.parseInt(part4);
+		number4 = Integer.parseInt(part5);
+		number5 = Integer.parseInt(part6);
+		number6 = Integer.parseInt(part7);
+		}
+		catch(java.lang.NumberFormatException e) {
+			System.out.println("Incorrect entry!");
+			Main.showmenu();
+			throw e;
+		}
+		
+		
+		
 		if((number1>=1 && number1<=49)&&
->>>>>>> origin/ruben
 				(number2>=1 && number2<=49)&&	
 				(number3>=1 && number3<=49)&&
 				(number4>=1 && number4<=49)&&
 				(number5>=1 && number5<=49)&&
-				(number6>=1 && number6<=49)));
+				(number6>=1 && number6<=49));
 			else{
 				System.out.println("Incorrect entry!");
 				Main.showmenu();
@@ -63,15 +71,16 @@ public class Entry {
 		comparison.add(number4);
 		comparison.add(number5);
 		comparison.add(number6);
-		int hits = 6 - comparison.size();
-			if(hits!=6){
+			if(comparison.size()!=6){
 				System.out.println("Incorrect entry!");
 				Main.showmenu();
-			}
+			}	
 		
 		Storage.store(part1, number1, number2, number3, number4, number5, number6);		
 		Main.setentryused(1);
 		Main.showmenu();
 		}
+		
+	
 	}
 }
