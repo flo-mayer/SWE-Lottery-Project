@@ -72,6 +72,5 @@ public class Result {
 			System.out.println("Invalid input!");
 			askclear();
 		}
-	}
-	
+	}	
 }

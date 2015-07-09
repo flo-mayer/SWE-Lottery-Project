@@ -7,8 +7,6 @@ import java.util.Set;
 
 public class Entry {
 	String entry;
-	//InputStreamReader isr = new InputStreamReader(System.in);
-	//BufferedReader entry = new BufferedReader(isr);
 
 	static void startentry()throws IOException{
 		InputStreamReader isr = new InputStreamReader(System.in);
