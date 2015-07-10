@@ -11,6 +11,13 @@ public class Entry {
 	static void startentry()throws IOException{
 		InputStreamReader isr = new InputStreamReader(System.in);
 		BufferedReader br = new BufferedReader(isr);
+		String part1 = null; 
+		String part2 = null;
+		String part3 = null;
+		String part4 = null;
+		String part5 = null;
+		String part6 = null;
+		String part7 = null;
 		System.out.println("Please enter your name and number.");
 		System.out.println("Like this:");
 		System.out.println("MaxMustermann 1 23 21 33 11 22");
@@ -21,15 +28,20 @@ public class Entry {
 			}
 		else{
 		String[] parts = entry.split(" ");
-		String part1 = parts[0]; 
-		String part2 = parts[1];
-		String part3 = parts[2];
-		String part4 = parts[3];
-		String part5 = parts[4];
-		String part6 = parts[5];
-		String part7 = parts[6];
+		if (parts.length==7){
+		part1 = parts[0]; 
+		part2 = parts[1];
+		part3 = parts[2];
+		part4 = parts[3];
+		part5 = parts[4];
+		part6 = parts[5];
+		part7 = parts[6];
+		}
+		else{
+			System.out.println("Incorrect entry!");
+			Main.showmenu();
+		}
 		
-
 		int number1 = 0;
 		int number2 = 0;
 		int number3 = 0;
@@ -50,6 +62,8 @@ public class Entry {
 			Main.showmenu();
 			throw e;
 		}
+		
+		
 		
 		if((number1>=1 && number1<=49)&&
 				(number2>=1 && number2<=49)&&	
@@ -73,7 +87,9 @@ public class Entry {
 				Main.showmenu();
 			}	
 		
-		Storage.store(part1, number1, number2, number3, number4, number5, number6);		
+		Storage.store(part1, number1, number2, number3, number4, number5, number6);	
+		System.out.println("Entry Succesful!");
+		System.out.println("Name: "+part1+"\nNumbers: " + number1 + " " + number2 + " " + number3 + " " + number4 + " " + number5 + " " + number6);
 		Storage.setentryused(1);
 		Main.showmenu();
 		}
