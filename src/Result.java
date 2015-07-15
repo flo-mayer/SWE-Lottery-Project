@@ -61,7 +61,16 @@ public class Result {
 		System.out.println("Choose:");
 		System.out.println("1 - Reset and return to menu");
 		System.out.println("0 - Quit");
-		int descission = sc.nextInt();
+		String input=sc.next();
+		int descission = -1;
+		try {
+			descission = Integer.parseInt(input);
+		}
+		catch(java.lang.NumberFormatException e){
+			System.out.println("Invalid input!");
+			askclear();
+			throw e;
+		}
 		if (descission==1){
 			Storage.clear();
 		}
